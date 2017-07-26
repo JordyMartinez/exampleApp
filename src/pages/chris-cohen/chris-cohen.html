@@ -1,0 +1,39 @@
+<!--
+  Generated template for the ChrisCohenPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+      
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Profile</ion-title>
+
+    <ion-buttons end>
+      <button (click)="openSearchPage()" ion-button clear="true"> 
+      <ion-icon name="search"></ion-icon>
+      </button>
+      </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+<img src = "assets/images/cohen.png"><br><h2 ALIGN=CENTER style="font-size:25px;">Chris Cohan</h2>
+  
+  <p ALIGN=CENTER style="font-size:15px;">Biology/USC/34</p>
+  <p ALIGN=CENTER style="font-size:12px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mattis dui eget mattis laoreet. Integer turpis tellus, feugiat quis faucibus et, placerat eget dolor. In interdum porttitor erat, vel pharetra sem consequat at. Praesent pulvinar elit eget convallis lacinia. Ut faucibus velit vitae purus consectetur, a tristique ligula tristique. Curabitur nibh urna, porttitor molestie venenatis ut, vehicula quis turpis. Aenean feugiat rhoncus justo id ornare. Sed consectetur tristique tellus, eu egestas velit consectetur sed. Nulla pharetra lacus a laoreet ultricies. Ut dictum justo augue, vitae porttitor turpis bibendum nec. Donec at ligula nulla.</p>
+  
+  <button ion-button (click)="sendSMS()">Send Message</button>
+
+  <button ion-button (click)="openMap()">See Location</button>
+
+</ion-content>

@@ -1,1 +1,32 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+  <br>
+  <img class="chris" src = "assets/images/cohen.png">
+  <br>
+  <h2 ALIGN=CENTER style="font-size:25px;">Chris Cohan</h2>
+  	<br>
+
+      <button class="sidemenubutton" style="display: block; margin: auto;" ion-button (click)="openPage(MajorsPage)">
+        Majors
+      </button>
+		<br>
+      <button class="sidemenubutton" align=CENTER style="display: block; margin: auto;" ion-button (click)="openPage(friendsPage)">
+        Profile
+      </button>
+		<br>
+      <button class="sidemenubutton" align="CENTER" style="display: block; margin: auto;" ion-button (click)="openPage(eventsPage)">
+        Inbox
+      </button>
+      	<br>
+      <button class="sidemenubutton" align="CENTER" style="display: block; margin: auto;" ion-button (click)="openPage(eventsPage)">
+        Sign out
+      </button>
+     
+  </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content ></ion-nav>
