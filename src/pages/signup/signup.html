@@ -6,11 +6,11 @@
           <ion-list inset>
             
             <ion-item >
-              <ion-input type="text" placeholder="Name:" name="Name" [(ngModel)]="registerCredentials.email" required></ion-input>
+              <ion-input type="text" placeholder="Name:" name="Name" [(ngModel)]="registerCredentials.name" required></ion-input>
             </ion-item>
             <br>
             <ion-item >
-              <ion-input type="text" placeholder="Phone Number:" name="Phone Number" [(ngModel)]="registerCredentials.email" required></ion-input>
+              <ion-input type="text" placeholder="Phone Number:" name="Phone Number" [(ngModel)]="registerCredentials.phonenumber" required></ion-input>
             </ion-item>
                 <br>
             <ion-item>
@@ -18,22 +18,20 @@
             </ion-item>
               <br>
             <ion-item >
-             <ion-input type="text" placeholder="Education:" name="Education" [(ngModel)]="registerCredentials.email" required></ion-input>
+             <ion-input type="text" placeholder="Education:" name="Education" [(ngModel)]="registerCredentials.education" required></ion-input>
             </ion-item>
               <br>
             <ion-item>
-              <ion-input type="text" placeholder="Desired Career:" name="Desired Career" [(ngModel)]="registerCredentials.email" required></ion-input>
+              <ion-input type="text" placeholder="Desired Career:" name="Desired Career" [(ngModel)]="registerCredentials.desiredcareer" required></ion-input>
             </ion-item>
               <br>
             <ion-item>
-              <ion-input type="text" placeholder="Username:" name="Username" [(ngModel)]="registerCredentials.email" required></ion-input>
+              <ion-input type="text" placeholder="Username:" name="Username" [(ngModel)]="registerCredentials.username" required></ion-input>
             </ion-item>
               <br>
             <ion-item>
               <ion-input type="password" placeholder="Password:" name="password" [(ngModel)]="registerCredentials.password" required></ion-input>
             </ion-item>
-             
-             
             
           </ion-list>
         </ion-col>
@@ -41,8 +39,8 @@
         <br>
       <ion-row>
         <ion-col class="signup-col">
-          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Sign Up</button>
-          
+          <button (click)="openMajorsPage()" ion-button class="submit-btn" full type="submit" 
+          [disabled]="!registerForm.form.valid">Sign Up</button>
         </ion-col>
       </ion-row>
       

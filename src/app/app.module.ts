@@ -8,7 +8,6 @@ import { GoogleMaps } from '@ionic-native/google-maps';
 
 
 import { LoginPage } from '../pages/login/login';
-// import { MenuPage } from '../pages/menu/menu';
 import { MentorsPage } from '../pages/mentors/mentors';
 import { MajorsPage } from '../pages/majors/majors';
 import { SearchPage } from'../pages/search/search';
@@ -39,6 +38,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     HttpModule,
+    
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

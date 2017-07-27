@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MajorsPage } from '../pages/majors/majors';
@@ -10,7 +10,7 @@ import { SignUpPage } from '../pages/signup/signup';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = SignUpPage;
+  rootPage:any = MajorsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -20,4 +20,5 @@ export class MyApp {
       splashScreen.hide();
     });
   }
+  
 }
