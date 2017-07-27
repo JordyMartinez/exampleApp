@@ -16,10 +16,10 @@
 <ion-content padding>
   <ion-card *ngFor="let mentor of mentors" class="cardcolor">
     <ion-card-content>
-  <img  src="assets/images/cohen.png" (click)="openChrisCohenPage()" align="left">
+  <img  src="assets/images/cohen.png" (click)="openMentorProfiles(MentorsProfile)" align="left">
   <br>
   <img class="greenos" src = "assets/images/greeno.png" align="right">
-  <h2 ALIGN=CENTER style="font-size:20px;">{{mentor.firstname}} {{mentor.lastname}}</h2>
+  <h2 ALIGN=CENTER style="font-size:20px;">{{mentor.first_name}} {{mentor.last_name}}</h2>
   
   
   <p ALIGN=CENTER style="font-size:15px;">{{mentor.major}}/{{mentor.age}}</p>

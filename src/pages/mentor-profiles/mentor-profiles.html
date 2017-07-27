@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+      
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Profile</ion-title>
+
+    <ion-buttons end>
+      <button (click)="openSearchPage()" ion-button clear="true"> 
+      <ion-icon name="search"></ion-icon>
+      </button>
+      </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+<img src = "assets/images/cohen.png">
+<br>
+<h2 ALIGN=CENTER style="font-size:25px;">{{mentor.first_name}}</h2>
+  
+  <p ALIGN=CENTER style="font-size:15px;">{{mentor.major}} {{mentor.education}} {{mentor.age}}</p>
+  <p ALIGN=CENTER style="font-size:16px;">{{mentor.bio}}</p>
+  
+  <button ion-button (click)="sendSMS()">Send Message</button>
+
+  <!-- <button ion-button (click)="openMap()">See Location</button> -->
+
+</ion-content>

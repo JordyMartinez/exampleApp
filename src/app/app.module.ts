@@ -8,6 +8,7 @@ import { GoogleMaps } from '@ionic-native/google-maps';
 
 import { LoginPage } from '../pages/login/login';
 import { MentorsPage } from '../pages/mentors/mentors';
+import { MentorProfilePage } from '../pages/mentor-profiles/mentor-profiles';
 import { MajorsPage } from '../pages/majors/majors';
 import { SearchPage } from'../pages/search/search';
 import { ChrisCohenPage } from '../pages/chris-cohen/chris-cohen';
@@ -33,6 +34,7 @@ import { MentorsProvider } from '../providers/mentors/mentors';
     ChrisMapPage,
     VanessaSlopPage,
     SignUpPage,
+    MentorProfilePage,
     TabsPage
   ],
   imports: [
@@ -53,6 +55,7 @@ import { MentorsProvider } from '../providers/mentors/mentors';
     ChrisMapPage,
     VanessaSlopPage,
     SignUpPage,
+    MentorProfilePage,
     TabsPage
   ],
   providers: [
