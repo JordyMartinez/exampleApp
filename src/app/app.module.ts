@@ -6,7 +6,6 @@ import { MyApp } from './app.component';
 import { SMS } from '@ionic-native/sms';
 import { GoogleMaps } from '@ionic-native/google-maps';
 
-
 import { LoginPage } from '../pages/login/login';
 import { MentorsPage } from '../pages/mentors/mentors';
 import { MajorsPage } from '../pages/majors/majors';
@@ -20,6 +19,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { MentorsProvider } from '../providers/mentors/mentors';
 
 @NgModule({
   declarations: [
@@ -60,7 +60,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     GoogleMaps,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    MentorsProvider
   ]
 })
 export class AppModule {}
