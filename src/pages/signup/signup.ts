@@ -14,14 +14,8 @@ export class SignUpPage {
  
   constructor(public navCtrl: NavController, private nav: NavController, private alertCtrl: AlertController, private loadingCtrl: LoadingController) { 
   }
- 
-  public createAccount() {
-    this.nav.push('SignUpPage');
-  }
- 
-  public login() {
-  }
-  openMentorsPage() {
+  
+  openMajorsPage() {
     this.navCtrl.push(MajorsPage)
   }
 }

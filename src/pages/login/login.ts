@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
+import { MajorsPage } from '../majors/majors';
+import { SignUpPage }from '../signup/signup';
+import { MentorsProvider } from '../../providers/mentors/mentors';
 // import { AuthService } from '../../providers/auth-service';
  
 //IonicPage()
@@ -8,14 +11,26 @@ import { NavController, AlertController, LoadingController, Loading, IonicPage }
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  users: any;
   loading: Loading;
   registerCredentials = { username: '', password: '' };
  
-  constructor(private nav: NavController, private alertCtrl: AlertController, private loadingCtrl: LoadingController) { }
+  constructor(private nav: NavController, private alertCtrl: AlertController, private loadingCtrl: LoadingController, public mentorsService: MentorsProvider) {
+    this.mentorsService.getMentors().then((data) => {
+      console.log(data);
+      this.users = data;
+    });
+   }
  
   public createAccount() {
-    this.nav.push('RegisterPage');
+    this.nav.push(SignUpPage);
   }
  
   public login() {
-  }}
+    for(let user of this.users){
+      if(user.username == this.registerCredentials.username && user.password == this.registerCredentials.password)
+        this.nav.push(MajorsPage);
+    } 
+    
+  }
+}

@@ -21,7 +21,7 @@ export class MentorsProvider {
   		return Promise.resolve(this.data);
   	}
   	return new Promise(resolve => {
-  		this.http.get('http://localhost:8080/api/mentors')
+  		this.http.get('http://')
   			.map(res => res.json())
   			.subscribe(data => {
   				this.data = data;
