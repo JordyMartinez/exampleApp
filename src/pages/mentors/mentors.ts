@@ -20,14 +20,12 @@ export class MentorsPage {
   ionViewDidLoad(){
     this.mentorsService.getMentors().then((data) => {
       console.log(data);
-      this.mentors=data;
+      this.mentors = data;
     });
   }
 
-  openMentorProfiles(mentorid) {
-    this.navCtrl.push(MentorProfilePage,{
-      param1: mentorid
-    });
+  openMentorProfiles(mentor) {
+    this.navCtrl.push(MentorProfilePage, mentor);
   }
   
 openVanessaSlopPage() {
