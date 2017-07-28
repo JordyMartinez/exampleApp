@@ -11,9 +11,23 @@ import { MentorsProvider } from '../../providers/mentors/mentors';
   templateUrl: 'mentor-profiles.html',
 })
 export class MentorProfilePage {
-	mentor: any;
+	mentor = {
+		"_id": "",
+        "first_name": "",
+        "last_name": "",
+        "phone_number": "",
+        "username": "",
+        "password": "",
+        "major": "",
+        "job_position": "",
+        "education": "",
+        "dream_career": "",
+        "bio": "",
+        "age": ""
+	};
 	mentors: any;
 	parameter1: any;
+	sendMessage: any;
   text = {
     "number": "", 
     "message": "",
@@ -33,8 +47,8 @@ export class MentorProfilePage {
       this.mentors=data;
     });
     for (let mentor of this.mentors){
-    	if (this.parameter1 == mentor.id)
-    		this.mentor = mentor;
+    	if (this.parameter1 === mentor.id)
+    		this.mentor = JSON.parse(mentor);
     }
   }
 
@@ -43,7 +57,7 @@ openSearchPage() {
   }
   
   sendSMS(){
-    console.log("hello")
+    this.sendMessage = 'Hi ' + this.mentor.first_name +' my name is';
     var options={
           replaceLineBreaks: false, // true to replace \n by a new line, false by default
           android: {
@@ -51,7 +65,7 @@ openSearchPage() {
               //intent: '' // Sends sms without opening default sms app
             }
     }
-    this.smsVar.send('4242076605', 'Hi ' + this.mentor.first_name +' my name is',options)
+    this.smsVar.send('4242076605', this.sendMessage,options)
       .then(()=>{
         
       },()=>{
