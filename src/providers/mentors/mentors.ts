@@ -21,7 +21,7 @@ export class MentorsProvider {
   		return Promise.resolve(this.data);
   	}
   	return new Promise(resolve => {
-  		this.http.get('http://')
+  		this.http.get('https://corvids-coachcopy.herokuapp.com/api/mentors')
   			.map(res => res.json())
   			.subscribe(data => {
   				this.data = data;
@@ -34,7 +34,7 @@ export class MentorsProvider {
   	let headers = new Headers();
   	headers.append('Content-Type', 'application/json');
 
-  	this.http.post('http://localhost:8080/api/mentors', JSON.stringify(mentor), {headers: headers})
+  	this.http.post('https://corvids-coachcopy.herokuapp.com/api/mentors', JSON.stringify(mentor), {headers: headers})
   		.subscribe(res => {
   			console.log(res.json());
   		});

@@ -27,9 +27,12 @@ export class LoginPage {
   }
  
   public login() {
+    console.log(this.registerCredentials.username);console.log(this.registerCredentials.password);
     for(let user of this.users){
-      if(user.username == this.registerCredentials.username && user.password == this.registerCredentials.password)
+      if(user.username === this.registerCredentials.username && user.password === this.registerCredentials.password) {
         this.nav.push(MajorsPage);
+        break;
+      }
     } 
     
   }
