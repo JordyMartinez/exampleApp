@@ -1,20 +1,28 @@
+<!-- <ion-header>
+  <ion-navbar color="primary"></ion-navbar>
+</ion-header> -->
 <ion-content class="signup-content" padding>
+  <ion-navbar transparent></ion-navbar>
   <div class="signup-box">
-    <form (ngSubmit)="SignUp()" #registerForm="ngForm">
+    <form  #registerForm="ngForm">
       <ion-row>
         <ion-col>
           <ion-list inset>
             
             <ion-item >
-              <ion-input type="text" placeholder="Name:" name="Name" [(ngModel)]="registerCredentials.name" required></ion-input>
+              <ion-input type="text" placeholder="First Name:" name="First Name" [(ngModel)]="registerCredentials.first_name" required></ion-input>
             </ion-item>
             <br>
             <ion-item >
-              <ion-input type="text" placeholder="Phone Number:" name="Phone Number" [(ngModel)]="registerCredentials.phonenumber" required></ion-input>
+              <ion-input type="text" placeholder="Last Name:" name="Last Name" [(ngModel)]="registerCredentials.last_name" required></ion-input>
+            </ion-item>
+            <br>
+            <ion-item >
+              <ion-input type="number" placeholder="Phone Number:" name="Phone Number" [(ngModel)]="registerCredentials.phone_number" required></ion-input>
             </ion-item>
                 <br>
             <ion-item>
-              <ion-input type="text" placeholder="Current Job Position:" name="Current Job Position" [(ngModel)]="registerCredentials.email" required></ion-input>
+              <ion-input type="text" placeholder="Current Job Position:" name="Current Job Position" [(ngModel)]="registerCredentials.job_position" required></ion-input>
             </ion-item>
               <br>
             <ion-item >
@@ -22,7 +30,7 @@
             </ion-item>
               <br>
             <ion-item>
-              <ion-input type="text" placeholder="Desired Career:" name="Desired Career" [(ngModel)]="registerCredentials.desiredcareer" required></ion-input>
+              <ion-input type="text" placeholder="Dream Career:" name="Dream Career" [(ngModel)]="registerCredentials.dream_career" required></ion-input>
             </ion-item>
               <br>
             <ion-item>
@@ -30,8 +38,14 @@
             </ion-item>
               <br>
             <ion-item>
-              <ion-input type="password" placeholder="Password:" name="password" [(ngModel)]="registerCredentials.password" required></ion-input>
+              <ion-input type="text" placeholder="Password:" name="Password" [(ngModel)]="registerCredentials.password" required></ion-input>
             </ion-item>
+            <br>
+            <ion-item >
+              <ion-input type="text" placeholder="Bio:" name="Bio" [(ngModel)]="registerCredentials.bio" required></ion-input>
+            </ion-item>
+            <br>
+          
             
           </ion-list>
         </ion-col>
