@@ -25,6 +25,7 @@ export class SignUpPage {
 
   constructor(public navCtrl: NavController, private nav: NavController, private alertCtrl: AlertController, private loadingCtrl: LoadingController, public mentorManager: MentorsProvider) {
   }
+<<<<<<< HEAD
 
   createMentor(mentor) {
    
@@ -33,6 +34,10 @@ export class SignUpPage {
      this.mentorManager.createMentor(this.registerCredentials)
     console.log(this.registerCredentials)
     
+=======
+  
+  openMajorsPage() {
+>>>>>>> 02110eb784eb6e1af68ef2e96d697a7753ed86ff
     this.navCtrl.push(MajorsPage)
   }
 }

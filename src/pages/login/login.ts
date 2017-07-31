@@ -30,7 +30,11 @@ export class LoginPage {
     console.log(this.registerCredentials.username);console.log(this.registerCredentials.password);
     for(let user of this.users){
       if(user.username === this.registerCredentials.username && user.password === this.registerCredentials.password) {
+<<<<<<< HEAD
         this.nav.setRoot(MajorsPage);
+=======
+        this.nav.push(MajorsPage);
+>>>>>>> 02110eb784eb6e1af68ef2e96d697a7753ed86ff
         break;
       }
     } 
