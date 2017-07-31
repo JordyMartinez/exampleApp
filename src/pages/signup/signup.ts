@@ -14,30 +14,28 @@ export class SignUpPage {
   registerCredentials = {
     first_name: '',
     last_name: '',
+    hobbies:'',
     username: '',
     password: '',
     phone_number: '',
     job_position: '',
     education: '',
     dream_career: '',
+    age: '',
     bio: ''
   };
+  activeButton: any;
 
   constructor(public navCtrl: NavController, private nav: NavController, private alertCtrl: AlertController, private loadingCtrl: LoadingController, public mentorManager: MentorsProvider) {
   }
-<<<<<<< HEAD
-
-  createMentor(mentor) {
-   
+  setHighlight(buttonToActivate){
+    this.activeButton === buttonToActivate;
   }
+ 
   openMajorsPage() {
      this.mentorManager.createMentor(this.registerCredentials)
     console.log(this.registerCredentials)
     
-=======
-  
-  openMajorsPage() {
->>>>>>> 02110eb784eb6e1af68ef2e96d697a7753ed86ff
     this.navCtrl.push(MajorsPage)
   }
 }

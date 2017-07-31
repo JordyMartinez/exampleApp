@@ -81,7 +81,7 @@ export class MentorProfilePage {
         //intent: '' // Sends sms without opening default sms app
       }
     }
-    this.smsVar.send('4242076605', this.sendMessage, options)
+    this.smsVar.send(this.mentor.phone_number, this.sendMessage, options)
       .then(() => {
 
       }, () => {

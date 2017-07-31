@@ -18,29 +18,18 @@
             </ion-item>
             <br>
             <ion-item >
-              <ion-input type="text" placeholder="Phone Number:" name="Phone Number" [(ngModel)]="registerCredentials.phone_number" required></ion-input>
+              <ion-input type="number" placeholder="Phone Number:" name="Phone Number" [(ngModel)]="registerCredentials.phone_number" required></ion-input>
             </ion-item>
                 <br>
-                <ion-item >
-              <ion-input type="text" placeholder="Hobbies:" name="Hobbies" [(ngModel)]="registerCredentials.hobbies" required></ion-input>
-            </ion-item>
-            <br>
-            <!-- <ion-item >
-              <ion-input type="text" placeholder="Age:" name="Age" [(ngModel)]="registerCredentials.age" required></ion-input>
-            </ion-item> -->
-            <!-- <br>
             <ion-item>
-              <ion-input type="text" placeholder="Current Job Position:" name="Current Job Position" [(ngModel)]="registerCredentials.job_position" required></ion-input>
+              <ion-input type="text" placeholder="Current Career:" name="Current Job Position" [(ngModel)]="registerCredentials.job_position" required></ion-input>
             </ion-item>
               <br>
             <ion-item >
              <ion-input type="text" placeholder="Education:" name="Education" [(ngModel)]="registerCredentials.education" required></ion-input>
             </ion-item>
+            
               <br>
-            <ion-item>
-              <ion-input type="text" placeholder="Dream Career:" name="Dream Career" [(ngModel)]="registerCredentials.dream_career" required></ion-input>
-            </ion-item>
-              <br> -->
             <ion-item>
               <ion-input type="text" placeholder="Username:" name="Username" [(ngModel)]="registerCredentials.username" required></ion-input>
             </ion-item>
@@ -49,28 +38,19 @@
               <ion-input type="text" placeholder="Password:" name="Password" [(ngModel)]="registerCredentials.password" required></ion-input>
             </ion-item>
             <br>
-            <!-- <ion-item >
+            <ion-item >
               <ion-input type="text" placeholder="Bio:" name="Bio" [(ngModel)]="registerCredentials.bio" required></ion-input>
             </ion-item>
-            <br> -->
+            <br>
           
             
           </ion-list>
         </ion-col>
       </ion-row>
-        
-        <ion-row>
-          <button (click) = "setHighlight(mentor-button)" ion-button color="light" outline class="role-btn" id="mentor-button"
-          type="button" ng-class="{'enabled': activeButton === mentor-button}">
-            Mentor</button> 
-        
-          <button (click)="setHighlight(mentee-button)" ion-button color="light" outline class="role-btn" id="mentee-button"
-          type="button" ng-class="{'enabled': activeButton === mentee-button}">
-            Mentee</button>
-        </ion-row>
+        <br>
       <ion-row>
         <ion-col class="signup-col">
-          <button color  (click)="openMajorsPage()" ion-button color="light" large outline class="submit-btn" type="submit" 
+          <button (click)="openMajorsPage()" ion-button class="submit-btn" full type="submit" 
           [disabled]="!registerForm.form.valid">Sign Up</button>
         </ion-col>
       </ion-row>

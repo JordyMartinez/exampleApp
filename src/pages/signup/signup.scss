@@ -9,11 +9,32 @@ page-signup {
       	margin-top: 30px;
 
 	}
-	.submit-btn {
 
-      
-      background:primary;
-   
-       
+	.signup-col{
+		margin: 0px 90px;
 	}
+
+	.role-btn {
+		margin-left: auto;
+		margin-right: auto;
+		color: white;
+
+	}
+	.role-btn:enabled{
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #38C2F6;
+		color: white;
+
+	}
+	ion-item {
+         border-radius: 30px !important;
+         padding-left: 30px !important;
+         font-size: 0.9em;
+         margin-bottom: 10px;
+         border: 1px solid #ffffff;
+         border-bottom: 0px !important;
+         box-shadow: none !important;
+     }
+	
 }
