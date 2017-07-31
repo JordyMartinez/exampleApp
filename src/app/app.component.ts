@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, Nav, NavParams, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { MajorsPage } from '../pages/majors/majors';
+
 import { LoginPage } from '../pages/login/login';
-import { SignUpPage } from '../pages/signup/signup';
-import { MentorSignUpPage } from '../pages/mentor-sign-up/mentor-sign-up';
+
+
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+  @ViewChild(NavController) navCtrl: NavController;
   rootPage:any = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
@@ -20,6 +21,10 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+  }
+  setRoot() {
+    this.navCtrl.setRoot(LoginPage);
+    this.navCtrl.popToRoot();
   }
   // signOut(){
   //   this.navCtrl.setRoot(LoginPage)
