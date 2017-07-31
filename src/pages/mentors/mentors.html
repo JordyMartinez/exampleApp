@@ -17,48 +17,13 @@
   <ion-card *ngFor="let mentor of mentors" class="cardcolor">
     <ion-card-content>
   <!--For this, we push the whole mentor object instead of just an idea-->
-  <img  src="assets/images/cohen.png" (click)="openMentorProfiles(mentor)" align="left">
+  <img  src="assets/images/user1.svg" (click)="openMentorProfiles(mentor)" align="left">
   <br>
   <img class="greenos" src = "assets/images/greeno.png" align="right">
-  <h2 ALIGN=CENTER style="font-size:20px;">{{mentor.first_name}} {{mentor.last_name}}</h2>
-  
-  
-  <p ALIGN=CENTER style="font-size:15px;">{{mentor.major}}/{{mentor.age}}</p>
+  <h2 ALIGN=CENTER style="font-size:25px;">{{mentor.first_name}} {{mentor.last_name}}</h2>
+  <p ALIGN=CENTER style="font-size:23px;">{{mentor.major}} </p>
     </ion-card-content>
     </ion-card>
-
-<!--     <ion-card class="cardcolor2">
-    <ion-card-content>
-  <img src = "assets/images/vanessa.png" (click)="openMentorsPage()" align="left">
-    <img class="greenos" src = "assets/images/greeno.png" align="right">
-    <br>
-    <h2 ALIGN=CENTER style="font-size:20px;">Vanessa Slop</h2>
-  
-  <p ALIGN=CENTER style="font-size:15px;">Chemical-biology/28</p>
-    </ion-card-content>
-    </ion-card>
-
-    <ion-card class="cardcolor3">
-    <ion-card-content>
-  <img src = "assets/images/chris.png" (click)="openChrisHopPage()" align="left">
-    <img class="greenos" src = "assets/images/greeno.png" align="right">
-    <br>
-    <h2 ALIGN=CENTER style="font-size:20px;">Chris Hop</h2>
-  
-  <p ALIGN=CENTER style="font-size:15px;">Biology/34</p>
-    </ion-card-content>
-    </ion-card>
-
-    <ion-card class="cardcolor4">
-    <ion-card-content>
-  <img src = "assets/images/asq.png" (click)="openErikaSalmosPage()" align="left">
-    <img class="greenos" src = "assets/images/greeno.png" align="right">
-    <br>
-    <h2 ALIGN=CENTER style="font-size:20px;">Erika Salmos</h2>
-  
-  <p ALIGN=CENTER style="font-size:15px;">Str-Biology/49</p>
-    </ion-card-content>
-    </ion-card> -->
 </ion-content>
 
 

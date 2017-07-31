@@ -21,12 +21,13 @@
 
 
 <ion-content padding>
-<img src = "assets/images/cohen.png">
+<img src = "assets/images/user1.svg">
 <br>
-<h2 ALIGN=CENTER style="font-size:25px;">{{mentor.first_name}}</h2>
+<h2 ALIGN=CENTER style="font-size:30px;">Name: {{mentor.first_name}} {{mentor.last_name}}</h2>
   
-  <p ALIGN=CENTER style="font-size:15px;">{{mentor.major}} {{mentor.education}} {{mentor.age}}</p>
-  <p ALIGN=CENTER style="font-size:16px;">{{mentor.bio}}</p>
+  <p ALIGN=CENTER style="font-size:24px;">Education: {{mentor.education}} {{mentor.major}} </p>
+  <p ALIGN=CENTER style="font-size:24px;">Age: {{mentor.age}}
+  <p ALIGN=CENTER style="font-size:20px;">About: {{mentor.bio}}</p>
   
   <button center ion-button (click)="sendSMS()">Send Message</button>
 
