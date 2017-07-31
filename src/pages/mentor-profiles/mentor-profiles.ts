@@ -43,31 +43,6 @@ export class MentorProfilePage {
     console.log(this.mentor);
   }
 
-  // ionViewDidLoad() {
-  //   console.log("view did load sir")
-  //   this.mentorsService.getMentors().then((data) => {
-  //     console.log("Data:", data);
-  //     for (let mentor of data) {
-  //       console.log(mentor._id)
-  //       console.log("id:",this.parameter1)
-  //       // if (this.parameter1 === mentor._id) {
-  //       //   console.log("Rangareza");
-  //         //this.mentor = JSON.parse(mentor);
-  //         //this.mentor = mentor;
-  //       //}
-  //     }
-  //   });
-
-    // for (let mentor of this.mentors) {
-    //   console.log("owo");
-    //   if (this.parameter1 === mentor.id) {
-    //     console.log(mentor);
-    //     this.mentor = JSON.parse(mentor);
-    //     // this.mentor = mentor;
-    //   }
-    // }
-  //}
-
   openSearchPage() {
     this.navCtrl.push(SearchPage);
   }
@@ -88,8 +63,8 @@ export class MentorProfilePage {
 
       });
   }
-  openMap() {
-    this.navCtrl.push(ChrisMapPage);
-  }
+  // openMap() {
+  //   this.navCtrl.push(ChrisMapPage);
+  // }
 
 }

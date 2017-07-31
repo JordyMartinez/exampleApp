@@ -15,7 +15,7 @@ import { ChrisCohenPage } from '../pages/chris-cohen/chris-cohen';
 import { ChrisMapPage } from '../pages/chris-map/chris-map';
 import { VanessaSlopPage } from '../pages/vanessa-slop/vanessa-slop';
 import { SignUpPage } from '../pages/signup/signup';
-
+import { EditPage } from'../pages/edit/edit';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -35,6 +35,7 @@ import { MentorsProvider } from '../providers/mentors/mentors';
     VanessaSlopPage,
     SignUpPage,
     MentorProfilePage,
+    EditPage,
     TabsPage
   ],
   imports: [
@@ -56,6 +57,7 @@ import { MentorsProvider } from '../providers/mentors/mentors';
     VanessaSlopPage,
     SignUpPage,
     MentorProfilePage,
+    EditPage,
     TabsPage
   ],
   providers: [

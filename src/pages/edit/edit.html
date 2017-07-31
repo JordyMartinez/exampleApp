@@ -1,18 +1,34 @@
-<!--
-  Generated template for the EditPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>edit</ion-title>
-  </ion-navbar>
+  <ion-navbar color="primary">
+      
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
 
+    <ion-title>Edit Profile</ion-title>
+
+    <ion-buttons end>
+      <button (click)="openSearchPage()" ion-button clear="true"> 
+      <ion-icon name="search"></ion-icon>
+      </button>
+      </ion-buttons>
+
+  </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
+<img src = "assets/images/user1.svg">
+<button clear ion-button (click)="openEditPage()" align="CENTER" style="display: block; margin: auto;">Edit Profile</button>
+<br>
+<h2 ALIGN=CENTER style="font-size:30px;">Name: {{mentor.first_name}} {{mentor.last_name}}</h2>
+  
+  <p ALIGN=CENTER style="font-size:24px;">Education: {{mentor.education}} {{mentor.major}} </p>
+  <p ALIGN=CENTER style="font-size:24px;">Age: {{mentor.age}}
+  <p ALIGN=CENTER style="font-size:20px;">About: {{mentor.bio}}</p>
+  
+  <button center ion-button>Save Changes</button>
+
+  <!-- <button ion-button (click)="openMap()">See Location</button> -->
 
 </ion-content>

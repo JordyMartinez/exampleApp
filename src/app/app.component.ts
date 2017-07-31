@@ -1,8 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, Nav, NavParams, Platform } from 'ionic-angular';
+import { NavController, Nav, NavParams, Platform, MenuClose, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { EditPage } from '../pages/edit/edit';
 import { LoginPage } from '../pages/login/login';
 
 
@@ -11,7 +11,7 @@ import { LoginPage } from '../pages/login/login';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  @ViewChild(NavController) navCtrl: NavController;
+  @ViewChild('content') navCtrl
   rootPage:any = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
@@ -25,6 +25,9 @@ export class MyApp {
   setRoot() {
     this.navCtrl.setRoot(LoginPage);
     this.navCtrl.popToRoot();
+  }
+  openEditPage(){
+    this.navCtrl.push(EditPage)
   }
   // signOut(){
   //   this.navCtrl.setRoot(LoginPage)

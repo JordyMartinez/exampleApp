@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
 import { MajorsPage } from '../majors/majors';
 import { SignUpPage }from '../signup/signup';
-import { MentorSignUpPage }from '../mentor-sign-up/mentor-sign-up';
+
 import { MentorsProvider } from '../../providers/mentors/mentors';
 // import { AuthService } from '../../providers/auth-service';
  
