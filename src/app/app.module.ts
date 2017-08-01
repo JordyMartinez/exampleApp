@@ -11,9 +11,9 @@ import { MentorsPage } from '../pages/mentors/mentors';
 import { MentorProfilePage } from '../pages/mentor-profiles/mentor-profiles';
 import { MajorsPage } from '../pages/majors/majors';
 import { SearchPage } from'../pages/search/search';
-import { ChrisCohenPage } from '../pages/chris-cohen/chris-cohen';
-import { ChrisMapPage } from '../pages/chris-map/chris-map';
-import { VanessaSlopPage } from '../pages/vanessa-slop/vanessa-slop';
+//import { ChrisCohenPage } from '../pages/chris-cohen/chris-cohen';
+//import { ChrisMapPage } from '../pages/chris-map/chris-map';
+//import { VanessaSlopPage } from '../pages/vanessa-slop/vanessa-slop';
 import { SignUpPage } from '../pages/signup/signup';
 
 import { TabsPage } from '../pages/tabs/tabs';
@@ -31,9 +31,9 @@ import { MenteesProvider } from '../providers/mentees/mentees';
     MentorsPage,
     MajorsPage,
     SearchPage,
-    ChrisCohenPage,
-    ChrisMapPage,
-    VanessaSlopPage,
+//    ChrisCohenPage,
+//    ChrisMapPage,
+//    VanessaSlopPage,
     SignUpPage,
     MentorProfilePage,
     TabsPage
@@ -52,9 +52,9 @@ import { MenteesProvider } from '../providers/mentees/mentees';
     MentorsPage,
     MajorsPage,
     SearchPage,
-    ChrisCohenPage,
-    ChrisMapPage,
-    VanessaSlopPage,
+//    ChrisCohenPage,
+//    ChrisMapPage,
+//    VanessaSlopPage,
     SignUpPage,
     MentorProfilePage,
     TabsPage
