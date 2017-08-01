@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
 import { MajorsPage } from '../majors/majors';
+import { MentorRequestsPage } from '../mentor-requests/mentor-requests';
 import { MentorsProvider } from '../../providers/mentors/mentors';
 // import { AuthService } from '../../providers/auth-service';
 
@@ -25,7 +26,7 @@ export class SignUpPage {
     bio: ''
   };
   activeButton: any;
-
+  role: string;
   constructor(public navCtrl: NavController, private nav: NavController, private alertCtrl: AlertController, private loadingCtrl: LoadingController, public mentorManager: MentorsProvider) {
   }
   setHighlight(buttonToActivate){
@@ -35,7 +36,10 @@ export class SignUpPage {
   openMajorsPage() {
      this.mentorManager.createMentor(this.registerCredentials)
     console.log(this.registerCredentials)
-    
-    this.navCtrl.push(MajorsPage)
+    if (this.role == "Mentee") {
+      this.navCtrl.setRoot(MajorsPage)
+  }else {
+     this.navCtrl.setRoot(MentorRequestsPage);
+  }
   }
 }

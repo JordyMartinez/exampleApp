@@ -17,7 +17,9 @@ import { MentorProfilePage } from '../pages/mentor-profiles/mentor-profiles';
 import { MajorsPage } from '../pages/majors/majors';
 import { SearchPage } from'../pages/search/search';
 import { SignUpPage } from '../pages/signup/signup';
+import { MentorRequestsPage }from '../pages/mentor-requests/mentor-requests';
 import { EditPage } from'../pages/edit/edit';
+import { RequestPage }from '../pages/request/request';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -28,13 +30,19 @@ import { MentorsProvider } from '../providers/mentors/mentors';
   declarations: [
     MyApp,
     LoginPage,
-    // MenuPage,
     MentorsPage,
+    EngineeringMentorsPage,
+    MathMentorsPage,
+    GraphicsMentorsPage,
+    PhysicsMentorsPage,
+    TheaterMentorsPage,
     MajorsPage,
     SearchPage,
     SignUpPage,
     MentorProfilePage,
     EditPage,
+    RequestPage,
+    MentorRequestsPage,
     TabsPage
   ],
   imports: [
@@ -47,13 +55,20 @@ import { MentorsProvider } from '../providers/mentors/mentors';
   entryComponents: [
     MyApp,
     LoginPage,
-    // MenuPage,
     MentorsPage,
+    EngineeringMentorsPage,
+    MathMentorsPage,
+    GraphicsMentorsPage,
+    PhysicsMentorsPage,
+    TheaterMentorsPage,
+    MajorsPage,
     MajorsPage,
     SearchPage,
     SignUpPage,
     MentorProfilePage,
     EditPage,
+    RequestPage,
+    MentorRequestsPage,
     TabsPage
   ],
   providers: [

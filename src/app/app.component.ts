@@ -3,6 +3,7 @@ import { NavController, Nav, NavParams, Platform, MenuClose, MenuController } fr
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MentorsProvider } from '../providers/mentors/mentors';
+import { RequestPage } from'../pages/request/request';
 import { EditPage } from '../pages/edit/edit';
 import { LoginPage } from '../pages/login/login';
 
@@ -14,7 +15,7 @@ import { LoginPage } from '../pages/login/login';
 export class MyApp {
   @ViewChild('content') navCtrl
   rootPage:any = LoginPage;
-  mentors: any;
+  mentorName: any;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public mentorsService: MentorsProvider) {
     platform.ready().then(() => {
@@ -28,13 +29,16 @@ export class MyApp {
     this.navCtrl.setRoot(LoginPage);
     this.navCtrl.popToRoot();
   }
-  ionViewDidLoad(){
-    this.mentorsService.getMentors().then((data) => {
-      console.log(data);
-      this.mentors = data;
-    });
+  // ionViewDidLoad(){
+  //   this.mentorsService.getMentors().then((data) => {
+  //     console.log(data[0]);
+  //     this.mentorName = data[0];
+  //   });
+  // }
+  openRequestPage(){
+    this.navCtrl.push(RequestPage)
   }
-  
+
   openEditPage(){
     this.navCtrl.push(EditPage)
   }

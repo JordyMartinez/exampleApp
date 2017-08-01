@@ -4,27 +4,19 @@
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content padding>
-    
+  <ion-content>
+   <h2 ALIGN=CENTER style="font-size:25px;">Jordy Martinez</h2> 
   <br>
   <img src = "assets/images/user1.svg">
-  <br>
-  <h2 *ngFor="let mentor of mentors" ALIGN=CENTER style="font-size:25px;">{{mentor.first_name}} {{mentor.last_name}}</h2>
-  	<br>
-
-      <!-- <button class="sidemenubutton" style="display: block; margin: auto;" ion-button (click)="openPage(MentorsPage)">
-        Career Paths
-      </button> -->
-		<!-- <br>
-      <button class="sidemenubutton" align=CENTER style="display: block; margin: auto;" ion-button (click)="openPage(profilePage)">
-        Profile
-      </button> -->
-
-      	<br>
+        <br>
+        <button ion-button (click)="openRequestPage()" class="sidemenubutton" align="CENTER" style="display: block; margin: auto;" menuClose >
+        Mentors
+      </button>
+      <br>
       <button ion-button (click)="setRoot()" class="sidemenubutton" align="CENTER" style="display: block; margin: auto;" menuClose >
         Sign out
       </button>
-<br>
+        <br>
       <button ion-button (click)="openEditPage()" class="sidemenubutton" align="CENTER" style="display: block; margin: auto;" menuClose >
         Edit Profile
       </button>
