@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { SMS } from '@ionic-native/sms';
 import { Platform } from 'ionic-angular';
-import { ChrisMapPage } from '../chris-map/chris-map';
 import { SearchPage } from '../search/search';
+
 import { MentorsProvider } from '../../providers/mentors/mentors';
 
 @Component({

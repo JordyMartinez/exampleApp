@@ -5,10 +5,10 @@ import { MentorsProvider } from '../../providers/mentors/mentors';
 import { MentorProfilePage } from '../mentor-profiles/mentor-profiles';
 
 @Component({
-  selector: 'page-mentors',
-  templateUrl: 'mentors.html',
+  selector: 'page-engineering-mentors',
+  templateUrl: 'engineering-mentors.html',
 })
-export class MentorsPage {
+export class EngineeringMentorsPage {
   //Variables go right underneath the class declaration
   mentors: any;
 
