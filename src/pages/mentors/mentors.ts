@@ -17,7 +17,7 @@ export class MentorsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public mentorsService: MentorsProvider, public ModalController: ModalController) {
   }
 
-  ionViewDidLoad(){
+  ionViewDidLoad() {
     this.mentorsService.getMentors().then((data) => {
       console.log(data);
       this.mentors = data;
@@ -27,11 +27,12 @@ export class MentorsPage {
   openMentorProfiles(mentor) {
     this.navCtrl.push(MentorProfilePage, mentor);
   }
-  
-openVanessaSlopPage() {
-    this.navCtrl.push(VanessaSlopPage)
-}
 
-openSearchPage() {
+  openVanessaSlopPage() {
+    this.navCtrl.push(VanessaSlopPage)
+  }
+
+  openSearchPage() {
     this.navCtrl.push(SearchPage)
-    }}
+  }
+}

@@ -40,4 +40,34 @@ export class MentorsProvider {
   		});
   }
 
+	updatePendingMentee(mentorID, menteeID) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+
+		let updateInfo = {
+			mentorID: mentorID,
+			menteeID: menteeID
+		};
+
+    this.http.post('https://corvids-coachcopy.herokuapp.com/api/acceptMentee', JSON.stringify(updateInfo), {headers: headers })
+      .subscribe(res => {
+        console.log(res.json());
+      });
+  }
+
+	deletePendingMentee(mentorID, menteeID) {
+		let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+
+		let updateInfo = {
+			mentorID: mentorID,
+			menteeID: menteeID
+		};
+
+    this.http.post('https://corvids-coachcopy.herokuapp.com/api/deletePendingMentee', JSON.stringify(updateInfo), {headers: headers })
+      .subscribe(res => {
+        console.log(res.json());
+      });
+  }
+
 }

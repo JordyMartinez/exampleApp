@@ -21,6 +21,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MentorsProvider } from '../providers/mentors/mentors';
+import { MenteesProvider } from '../providers/mentees/mentees';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { MentorsProvider } from '../providers/mentors/mentors';
     SplashScreen,
     GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MentorsProvider
+    MentorsProvider,
+    MenteesProvider
   ]
 })
 export class AppModule {}

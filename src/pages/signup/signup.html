@@ -6,15 +6,19 @@
           <ion-list inset>
             
             <ion-item >
-              <ion-input type="text" placeholder="Name:" name="Name" [(ngModel)]="registerCredentials.name" required></ion-input>
+              <ion-input type="text" placeholder="First Name:" name="First Name" [(ngModel)]="registerCredentials.first_name" required></ion-input>
             </ion-item>
             <br>
             <ion-item >
-              <ion-input type="text" placeholder="Phone Number:" name="Phone Number" [(ngModel)]="registerCredentials.phonenumber" required></ion-input>
+              <ion-input type="text" placeholder="Last Name:" name="Last Name" [(ngModel)]="registerCredentials.last_name" required></ion-input>
+            </ion-item>
+            <br>
+            <ion-item >
+              <ion-input type="text" placeholder="Phone Number:" name="Phone Number" [(ngModel)]="registerCredentials.phone_number" required></ion-input>
             </ion-item>
                 <br>
             <ion-item>
-              <ion-input type="text" placeholder="Current Job Position:" name="Current Job Position" [(ngModel)]="registerCredentials.email" required></ion-input>
+              <ion-input type="text" placeholder="Current Job Position:" name="Current Job Position" [(ngModel)]="registerCredentials.job_position" required></ion-input>
             </ion-item>
               <br>
             <ion-item >
@@ -22,7 +26,7 @@
             </ion-item>
               <br>
             <ion-item>
-              <ion-input type="text" placeholder="Desired Career:" name="Desired Career" [(ngModel)]="registerCredentials.desiredcareer" required></ion-input>
+              <ion-input type="text" placeholder="Dream Career:" name="Dream Career" [(ngModel)]="registerCredentials.dream_career" required></ion-input>
             </ion-item>
               <br>
             <ion-item>
@@ -39,7 +43,7 @@
         <br>
       <ion-row>
         <ion-col class="signup-col">
-          <button (click)="openMajorsPage()" ion-button class="submit-btn" full type="submit" 
+          <button (click)="signUp()" ion-button class="submit-btn" full type="submit" 
           [disabled]="!registerForm.form.valid">Sign Up</button>
         </ion-col>
       </ion-row>

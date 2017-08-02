@@ -5,6 +5,7 @@ import { Platform } from 'ionic-angular';
 import { ChrisMapPage } from '../chris-map/chris-map';
 import { SearchPage } from '../search/search';
 import { MentorsProvider } from '../../providers/mentors/mentors';
+import { MenteesProvider } from '../../providers/mentees/mentees';
 
 @Component({
   selector: 'page-mentor-profiles',
@@ -35,7 +36,7 @@ export class MentorProfilePage {
   };
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform, public mentorsService: MentorsProvider, public ModalController: ModalController, private smsVar: SMS) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform, public mentorsService: MentorsProvider, public ModalController: ModalController, private smsVar: SMS, public menteesService: MenteesProvider) {
     platform.ready().then(() => {
 
     });
@@ -72,6 +73,14 @@ export class MentorProfilePage {
     this.navCtrl.push(SearchPage);
   }
 
+  sendRequest() {
+    this.menteesService.addPendingMentor("598113f9d3bd990011ead498", this.mentor._id);
+  }
+
+  acceptRequest() {
+    this.mentorsService.updatePendingMentee(this.mentor._id, "598113f9d3bd990011ead498");
+  }
+
   sendSMS() {
     this.sendMessage = 'Hi ' + this.mentor.first_name + ' my name is';
     var options = {
@@ -81,11 +90,11 @@ export class MentorProfilePage {
         //intent: '' // Sends sms without opening default sms app
       }
     }
-    this.smsVar.send('4242076605', this.sendMessage, options)
+    this.smsVar.send(this.mentor.phone_number, this.sendMessage, options)
       .then(() => {
-
+        alert("Success!");
       }, () => {
-
+        alert("Error");
       });
   }
   openMap() {
