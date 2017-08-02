@@ -1,13 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { ChrisCohenPage } from '../chris-cohen/chris-cohen'
-
-/**
- * Generated class for the SearchPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-search',
@@ -25,13 +17,16 @@ itemSelected(item: string) {
 
   initializeItems() {
     this.items = [
-      'Chris Cohen',
-      'Vanessa Slop',
-      'Chris Hop',
-      'Erika Salmos',
+      'Jennifer Marston',
+      'Jordan Martinez',
+      'Fredrick Casmarias',
+      'Michael Furey',
       'Biology',
       'Engineering',
-
+      'Math',
+      'Graphics',
+      'Physics',
+      'Theater'
       ];
 
   }

@@ -5,17 +5,17 @@ import { MentorsProvider } from '../../providers/mentors/mentors';
 import { MentorProfilePage } from '../mentor-profiles/mentor-profiles';
 
 @Component({
-  selector: 'page-mentors',
-  templateUrl: 'mentors.html',
+  selector: 'page-physics-mentors',
+  templateUrl: 'physics-mentors.html',
 })
-export class MentorsPage {
+export class PhysicsMentorsPage {
   //Variables go right underneath the class declaration
   mentors: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public mentorsService: MentorsProvider, public ModalController: ModalController) {
   }
 
-  ionViewDidLoad() {
+  ionViewDidLoad(){
     this.mentorsService.getMentors().then((data) => {
       console.log(data);
       this.mentors = data;
@@ -26,7 +26,6 @@ export class MentorsPage {
     this.navCtrl.push(MentorProfilePage, mentor);
   }
 
-  openSearchPage() {
+openSearchPage() {
     this.navCtrl.push(SearchPage)
-  }
-}
+    }}

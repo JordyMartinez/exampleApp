@@ -4,27 +4,21 @@
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content>
-  <br>
-  <img class="chris" src = "assets/images/cohen.png">
-  <br>
-  <h2 ALIGN=CENTER style="font-size:25px;">Chris Cohan</h2>
-  	<br>
-
-      <button class="sidemenubutton" style="display: block; margin: auto;" ion-button (click)="openMentorsPage()">
-        Majors
+  <ion-content padding>
+   <h2 ALIGN=CENTER style="font-size:25px;">Jordy Martinez</h2> 
+  
+  <img class = "user1" src = "assets/images/user1.svg">
+        
+        <button ion-button (click)="openRequestPage()" class="sidemenubutton" align="CENTER" style="display: block; margin: auto;" menuClose >
+        Mentors
       </button>
-		<br>
-      <button class="sidemenubutton" align=CENTER style="display: block; margin: auto;" ion-button (click)="openPage(profilePage)">
-        Profile
-      </button>
-		<br>
-      <button class="sidemenubutton" align="CENTER" style="display: block; margin: auto;" ion-button (click)="openPage(inboxPage)">
-        Inbox
-      </button>
-      	<br>
-      <button class="sidemenubutton" align="CENTER" style="display: block; margin: auto;" ion-button (click)="openPage(signupPage)">
+      <br>
+      <button ion-button (click)="setRoot()" class="sidemenubutton" align="CENTER" style="display: block; margin: auto;" menuClose >
         Sign out
+      </button>
+        <br>
+      <button ion-button (click)="openEditPage()" class="sidemenubutton" align="CENTER" style="display: block; margin: auto;" menuClose >
+        Edit Profile
       </button>
      
   </ion-content>

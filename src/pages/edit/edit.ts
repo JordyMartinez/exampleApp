@@ -2,23 +2,23 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the VanessaSlopPage page.
+ * Generated class for the EditPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 
 @Component({
-  selector: 'page-vanessa-slop',
-  templateUrl: 'vanessa-slop.html',
+  selector: 'page-edit',
+  templateUrl: 'edit.html',
 })
-export class VanessaSlopPage {
+export class EditPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad VanessaSlopPage');
+    console.log('ionViewDidLoad EditPage');
   }
 
 }

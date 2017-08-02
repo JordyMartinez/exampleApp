@@ -5,33 +5,30 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-
-    <ion-title>Profile</ion-title>
-
+    
     <ion-buttons end>
       <button (click)="openSearchPage()" ion-button clear="true"> 
       <ion-icon name="search"></ion-icon>
       </button>
-      </ion-buttons>
+    </ion-buttons>
 
   </ion-navbar>
-
 </ion-header>
 
 
 
 <ion-content padding>
-<img src = "assets/images/cohen.png">
+<img src = "assets/images/user1.svg">
 <br>
-<h2 ALIGN=CENTER style="font-size:25px;">{{mentor.first_name}}</h2>
-  
-  <p ALIGN=CENTER style="font-size:15px;">{{mentor.major}} {{mentor.education}} {{mentor.age}}</p>
-  <p ALIGN=CENTER style="font-size:16px;">{{mentor.bio}}</p>
-  
-  <button ion-button (click)="sendSMS()">Send Message</button>
-  <button ion-button (click)="sendRequest()">Send Request</button>
-  <button ion-button (click)="acceptRequest()">Accept Request</button>
-
+<h1 style = "font-size:24px;">{{mentor.first_name}} {{mentor.last_name}}</h1>
+  <p style="font-size:24px;">Education: {{mentor.education}} {{mentor.major}} </p>
+  <p style="font-size:24px;">Age: {{mentor.age}}
+  <p style="font-size:20px;">About: {{mentor.bio}}</p>
+  <ion-row>
+     <ion-col width-50 style="text-align: center">
+  <button center ion-button (click)="sendSMS()">Request </button>
+      </ion-col>
+  </ion-row>
   <!-- <button ion-button (click)="openMap()">See Location</button> -->
 
 </ion-content>

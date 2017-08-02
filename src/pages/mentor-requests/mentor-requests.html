@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Mentor Requests</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item-group>
+    <ion-item-divider color="light">Pending</ion-item-divider>
+    
+    <ion-item >Jennifer Marston <img class="redX" src = "assets/images/greenPlus.png" align="left">
+      <img class="greenPlus" src = "assets/images/redX.png" align="right">
+    </ion-item>
+
+    
+ 
+    <ion-item>Jordan Martinez <img class="greenPlus" src = "assets/images/greenPlus.png" align="left">
+      <img class="redX" src = "assets/images/redX.png" align="right">
+    </ion-item>
+    
+    
+    
+    <ion-item>Michael Furey <img class="greenPlus" src = "assets/images/greenPlus.png" align="left">
+      <img class="redX" src = "assets/images/redX.png" align="right">
+    </ion-item>
+      
+    
+    
+    <ion-item-divider color="light">Accepted</ion-item-divider>
+    <ion-item (click)="openMentorProfiles(mentor)">Kenny Recinos<ion-icon name="text" item-end></ion-icon></ion-item>
+  </ion-item-group>
+
+</ion-content>

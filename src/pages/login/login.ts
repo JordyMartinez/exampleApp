@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
 import { MajorsPage } from '../majors/majors';
 import { SignUpPage }from '../signup/signup';
+
 import { MentorsProvider } from '../../providers/mentors/mentors';
 // import { AuthService } from '../../providers/auth-service';
  
@@ -21,7 +22,7 @@ export class LoginPage {
       this.users = data;
     });
    }
- 
+
   public createAccount() {
     this.nav.push(SignUpPage);
   }
@@ -30,7 +31,7 @@ export class LoginPage {
     console.log(this.registerCredentials.username);console.log(this.registerCredentials.password);
     for(let user of this.users){
       if(user.username === this.registerCredentials.username && user.password === this.registerCredentials.password) {
-        this.nav.push(MajorsPage);
+        this.nav.setRoot(MajorsPage);
         break;
       }
     } 

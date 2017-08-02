@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
 import { MajorsPage } from '../majors/majors';
+import { MentorRequestsPage } from '../mentor-requests/mentor-requests';
 import { MentorsProvider } from '../../providers/mentors/mentors';
 // import { AuthService } from '../../providers/auth-service';
 
@@ -15,24 +16,28 @@ export class SignUpPage {
   registerCredentials = {
     first_name: '',
     last_name: '',
+    hobbies:'',
     username: '',
     password: '',
     phone_number: '',
-    major: '',
     job_position: '',
     education: '',
     dream_career: '',
-    bio: '',
     age: '',
-    pendingMentees: [],
-    acceptedMentees: []
+    bio: ''
   };
-
-  constructor(public navCtrl: NavController, private nav: NavController, private alertCtrl: AlertController, private loadingCtrl: LoadingController, public mentorsService: MentorsProvider) {
+  activeButton: any;
+  role: string;
+  constructor(public navCtrl: NavController, private nav: NavController, private alertCtrl: AlertController, private loadingCtrl: LoadingController, public mentorManager: MentorsProvider) {
   }
-
-  signUp() {
-    this.mentorsService.createMentor(this.registerCredentials);
-    this.navCtrl.push(MajorsPage)
+ 
+  openMajorsPage() {
+     this.mentorManager.createMentor(this.registerCredentials)
+    console.log(this.registerCredentials)
+    if (this.role == "Mentee") {
+      this.navCtrl.setRoot(MajorsPage)
+  }else {
+     this.navCtrl.setRoot(MentorRequestsPage);
+  }
   }
 }
