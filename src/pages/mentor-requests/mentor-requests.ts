@@ -4,8 +4,8 @@ import { MentorsProvider } from '../../providers/mentors/mentors';
 import { MentorProfilePage } from '../mentor-profiles/mentor-profiles';
 
 @Component({
-  selector: 'page-mentor-request',
-  templateUrl: 'mentor-request.html',
+  selector: 'page-mentor-requests',
+  templateUrl: 'mentor-requests.html',
 })
 export class MentorRequestsPage {
 mentors: any;

@@ -4,12 +4,11 @@
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-<<<<<<< HEAD
-  <ion-content>
+  <ion-content padding>
    <h2 ALIGN=CENTER style="font-size:25px;">Jordy Martinez</h2> 
-  <br>
-  <img src = "assets/images/user1.svg">
-        <br>
+  
+  <img class = "user1" src = "assets/images/user1.svg">
+        
         <button ion-button (click)="openRequestPage()" class="sidemenubutton" align="CENTER" style="display: block; margin: auto;" menuClose >
         Mentors
       </button>
@@ -18,29 +17,6 @@
         Sign out
       </button>
         <br>
-=======
-  <ion-content padding>
-    
-  <br>
-  <img src = "assets/images/user1.svg">
-  <br>
-  <h2 *ngFor="let mentor of mentors" ALIGN=CENTER style="font-size:25px;">{{mentor.first_name}} {{mentor.last_name}}</h2>
-  	<br>
-
-      <!-- <button class="sidemenubutton" style="display: block; margin: auto;" ion-button (click)="openPage(MentorsPage)">
-        Career Paths
-      </button> -->
-		<!-- <br>
-      <button class="sidemenubutton" align=CENTER style="display: block; margin: auto;" ion-button (click)="openPage(profilePage)">
-        Profile
-      </button> -->
-
-      	<br>
-      <button ion-button (click)="setRoot()" class="sidemenubutton" align="CENTER" style="display: block; margin: auto;" menuClose >
-        Sign out
-      </button>
-<br>
->>>>>>> 473df12460e223293d8bf70da47f26cac6eda53c
       <button ion-button (click)="openEditPage()" class="sidemenubutton" align="CENTER" style="display: block; margin: auto;" menuClose >
         Edit Profile
       </button>
