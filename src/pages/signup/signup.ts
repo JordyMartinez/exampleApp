@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading, IonicPage } from 'ionic-angular';
 import { MajorsPage } from '../majors/majors';
 import { MentorRequestsPage } from '../mentor-requests/mentor-requests';
+
 import { MentorsProvider } from '../../providers/mentors/mentors';
+import { MenteesProvider } from '../../providers/mentees/mentees';
 // import { AuthService } from '../../providers/auth-service';
 
 //IonicPage()
@@ -28,15 +30,16 @@ export class SignUpPage {
   };
   activeButton: any;
   role: string;
-  constructor(public navCtrl: NavController, private nav: NavController, private alertCtrl: AlertController, private loadingCtrl: LoadingController, public mentorManager: MentorsProvider) {
+  constructor(public navCtrl: NavController, private nav: NavController, private alertCtrl: AlertController, private loadingCtrl: LoadingController, public mentorService: MentorsProvider, public menteeService: MenteesProvider) {
   }
  
-  openMajorsPage() {
-     this.mentorManager.createMentor(this.registerCredentials)
+  signUp() {
     console.log(this.registerCredentials)
     if (this.role == "Mentee") {
+      this.menteeService.createMentee(this.registerCredentials);
       this.navCtrl.setRoot(MajorsPage)
   }else {
+    this.mentorService.createMentor(this.registerCredentials);
      this.navCtrl.setRoot(MentorRequestsPage);
   }
   }

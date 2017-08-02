@@ -16,7 +16,7 @@ export class MenteesProvider {
     this.data = null;
   }
 
-  getMentors() {
+  getMentees() {
     if (this.data) {
       return Promise.resolve(this.data);
     }
@@ -52,6 +52,21 @@ export class MenteesProvider {
     };
 
     this.http.post('https://corvids-coachcopy.herokuapp.com/api/addPendingMentor', JSON.stringify(updateInfo), { headers: headers })
+      .subscribe(res => {
+        console.log(res.json());
+      });
+  }
+
+  deletePendingMentor(menteeID, mentorID) {
+		let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+
+		let updateInfo = {
+			mentorID: mentorID,
+			menteeID: menteeID
+		};
+
+    this.http.post('https://corvids-coachcopy.herokuapp.com/api/deletePendingMentee', JSON.stringify(updateInfo), {headers: headers })
       .subscribe(res => {
         console.log(res.json());
       });

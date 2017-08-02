@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Mentor Connections</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item-group>
+    <ion-item-divider color="light">Pending</ion-item-divider>
+
+    <ion-item *ngFor="let pending of this.pendingMentors" (click)="openMentorProfiles(pending)">{{pending.first_name}} {{pending.last_name}}
+      <img class="deleter" (click)="deleteMentorRequest(pending)" src="assets/images/redX.png" align="right">
+    </ion-item>
+
+    <ion-item-divider color="light">Accepted</ion-item-divider>
+    <ion-item *ngFor="let accepted of this.acceptedMentors" (click)="openMentorProfiles(accepted)">{{accepted.first_name}} {{accepted.last_name}}
+      <ion-icon name="text" item-end></ion-icon>
+    </ion-item>
+  </ion-item-group>
+
+</ion-content>

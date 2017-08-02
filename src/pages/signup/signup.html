@@ -69,9 +69,8 @@
         </ion-select>
       </ion-item>
       <ion-row>
-        <ion-col class="signup-col">
-            <button (click)="signUp()" ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Sign Up</button>
-            <button color (click)="openMajorsPage()" ion-button color="light" large outline class="submit-btn" type="submit" [disabled]="!registerForm.form.valid">Sign Up</button>    
+        <ion-col class="signup-col" col align="center">
+            <button color (click)="signUp()" ion-button color="light" large outline class="submit-btn" type="submit" [disabled]="!registerForm.form.valid">Sign Up</button>    
         </ion-col>
       </ion-row>
 

@@ -4,6 +4,8 @@ import { SearchPage } from '../search/search';
 import { MentorsProvider } from '../../providers/mentors/mentors';
 import { MentorProfilePage } from '../mentor-profiles/mentor-profiles';
 
+import { UserDataProvider } from '../../providers/user-data/user-data';
+
 @Component({
   selector: 'page-mentors',
   templateUrl: 'mentors.html',
@@ -11,8 +13,9 @@ import { MentorProfilePage } from '../mentor-profiles/mentor-profiles';
 export class MentorsPage {
   //Variables go right underneath the class declaration
   mentors: any;
+  userData: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public mentorsService: MentorsProvider, public ModalController: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public mentorsService: MentorsProvider, public ModalController: ModalController, public userService: UserDataProvider) {
   }
 
   ionViewDidLoad() {
@@ -20,10 +23,12 @@ export class MentorsPage {
       console.log(data);
       this.mentors = data;
     });
+    //this.userData = this.navParams.data;
+    this.userData = this.userService.getInfo();
   }
 
   openMentorProfiles(mentor) {
-    this.navCtrl.push(MentorProfilePage, mentor);
+    this.navCtrl.push(MentorProfilePage, { param1: mentor, param2: this.userData});
   }
 
   openSearchPage() {
