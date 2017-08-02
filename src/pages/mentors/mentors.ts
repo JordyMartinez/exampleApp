@@ -28,7 +28,7 @@ export class MentorsPage {
   }
 
   openMentorProfiles(mentor) {
-    this.navCtrl.push(MentorProfilePage, { param1: mentor, param2: this.userData});
+    this.navCtrl.push(MentorProfilePage, mentor);
   }
 
   openSearchPage() {
