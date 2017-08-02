@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MentorsProvider } from '../providers/mentors/mentors';
 import { RequestPage } from'../pages/request/request';
+import { MentorRequestsPage } from'../pages/mentor-requests/mentor-requests';
 import { EditPage } from '../pages/edit/edit';
 import { LoginPage } from '../pages/login/login';
 
@@ -14,7 +15,7 @@ import { LoginPage } from '../pages/login/login';
 })
 export class MyApp {
   @ViewChild('content') navCtrl
-  rootPage:any = LoginPage;
+  rootPage:any = MentorRequestsPage;
   mentorName: any;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public mentorsService: MentorsProvider) {
